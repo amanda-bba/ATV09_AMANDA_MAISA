@@ -1,0 +1,470 @@
+/* Amanda Bispo Barros de Araújo e Maisa Bezerra Azarias - ATVD 07 - 513 */
+
+/*Estilo geral do portal*/
+
+/* ESTILO GERAL DO SITE */
+
+body {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    margin: 15px;
+    padding: 0;
+}
+
+/*CABEÇALHO*/
+
+#cabecalho {
+
+    /* Configura a imagem de fundo do cabeçalho */
+    background-image: url('img/cabecalho.jpg');
+
+    /* Impede que a imagem seja repetida */
+    background-repeat: no-repeat;
+
+    /* Posiciona a imagem no lado direito e centralizada verticalmente */
+    background-position: right center;
+
+    /* Faz a imagem cobrir toda a área disponível */
+    background-size: cover;
+
+    width: 80%;
+    height: 110px;
+
+    /* Centraliza o elemento horizontalmente */
+    margin: auto;
+
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+
+    color: #000000;
+    text-shadow: 1px 1px 2px white;
+}
+
+/*CONTAINER PRINCIPAL*/
+
+#container {
+    width: 80%;
+
+    /* Centraliza o elemento horizontalmente */
+    margin: auto;
+
+    /* Organiza os elementos utilizando Flexbox */
+    display: flex;
+}
+
+/* MENU LATERAL */
+
+#menu {
+    width: 15%;
+    height: 580px;
+    background-color: #FFC0CB;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#menu a {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+
+    background-color: #FFF0F5;
+    color: black;
+
+    text-decoration: none;
+    border: 2px solid #DB7093;
+    border-radius: 10px;
+
+    font-weight: bold;
+    text-align: center;
+}
+
+#menu a:hover {
+    background-color: #FFC0CB;
+}
+
+/* CONTEÚDO */
+
+#conteudo {
+    width: 85%;
+    height: 600px;
+    padding: 0;
+
+    /* Inclui padding e borda dentro do tamanho total do elemento */
+    box-sizing: border-box;
+
+    /* Exibe barra de rolagem apenas quando necessário */
+    overflow: auto;
+
+    background-color: #FFF0F5;
+}
+
+/* RODAPÉ */
+
+#rodape {
+
+    /* Configura a imagem de fundo do rodapé */
+    background-image: url('img/rodape.jpg');
+
+    /* Permite que imagem seja repetida */
+    background-repeat: repeat;
+
+    background-position: center;
+
+    width: 80%;
+    height: 90px;
+
+    /* Centraliza o elemento horizontalmente */
+    margin: auto;
+
+    text-align: center;
+    font-size: 30px;
+    line-height: 90px;
+}
+
+/*IMAGENS GERAIS*/
+
+img {
+
+    /* Faz a imagem se adaptar ao tamanho do elemento pai */
+    max-width: 100%;
+    height: auto;
+}
+
+/*CAPA*/
+
+.capa{
+    width: 100%;
+
+    /* Define uma altura mínima para o elemento */
+    min-height: 600px;
+
+    /* Inclui padding e borda dentro do tamanho total do elemento */
+    box-sizing: border-box;
+}
+
+.titulo-capa {
+    font-size: 70px;
+}
+
+/*CURRÍCULOS*/
+
+.bloco-perfil {
+
+    /* Organiza foto e informações utilizando Flexbox */
+    display: flex;
+
+    margin-bottom: 20px;
+}
+
+#foto-amanda,
+#foto-maisa {
+    width: 200px;
+    margin: 20px;
+}
+
+.contatos-usuario {
+    font-family: Verdana;
+}
+
+.subtitulo-verdana {
+    font-family: Verdana;
+    font-size: 24px;
+}
+
+.subtitulo-tahoma {
+    font-family: Tahoma;
+    font-size: 24px;
+}
+
+.texto-georgia {
+    font-family: Georgia;
+}
+
+/* TEMA AMANDA*/
+
+.titulo-principal {
+    font-family: Georgia;
+    font-size: 35px;
+    text-align: center;
+    width: 90%;
+}
+
+.imagem-livro {
+    width: 160px;
+
+    /* Permite que o texto fique ao lado da imagem */
+    float: left;
+
+    margin-right: 15px;
+    align-items: center;
+}
+
+.titulo-livro {
+    font-size: 18px;
+}
+
+.informacoes {
+    font-family: Georgia;
+}
+
+.livro {
+    width: 700px;
+    margin: 0 auto 180px auto;
+    text-align: center;
+}
+
+/* TEMA MAISA*/
+
+#musica {
+    width: 100%;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.imagem {
+    border: 2px solid black;
+}
+
+.texto {
+    font-size: 16px;
+    text-align: center;
+}
+
+.area {
+    margin-top: 20px;
+}
+
+.link {
+    color: blue;
+    text-decoration: none;
+}
+
+.area img {
+
+    /* Faz a imagem ocupar uma linha inteira */
+    display: block;
+
+    /* Centraliza a imagem */
+    margin: auto;
+}
+
+#artistas table {
+
+    /* Centraliza a tabela */
+    margin: auto;
+}
+
+/*RESPONSIVIDADE*/
+
+/* MEDIA QUERY: Adapta o layout apenas para telas menores (celulares e tablets) */
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .capa {
+        width: 100%;
+        padding: 30px;
+
+        /* Inclui o padding dentro da largura total da seção */
+        box-sizing: border-box;
+
+        /* Mantém a imagem de fundo posicionada à direita */
+        background-position: right center;
+    }
+
+    .titulo-capa {
+        /* Diminui o tamanho do título para caber em telas pequenas */
+        font-size: 48px;
+
+        /* Ajusta o espaçamento entre as linhas do título */
+        line-height: 1.1;
+
+        /* Permite quebrar palavras muito grandes */
+        word-break: break-word;
+    }
+
+    #container {
+        /* Faz o conteúdo ocupar toda a largura da tela */
+        width: 100%;
+
+        /* Coloca o menu acima do conteúdo */
+        flex-direction: column;
+    }
+
+    #menu {
+        width: 100%;
+        height: auto;
+
+        /* Organiza os botões utilizando Flexbox */
+        display: flex;
+
+        /* Permite que os botões passem para outra linha */
+        flex-wrap: wrap;
+
+        /* Centraliza os botões */
+        justify-content: center;
+    }
+
+    #conteudo {
+        width: 100%;
+        height: auto;
+    }
+
+    #cabecalho,
+    #rodape {
+        width: 100%;
+    }
+
+    .bloco-perfil {
+
+        /* Coloca a foto acima das informações */
+        flex-direction: column;
+
+        /* Centraliza os elementos */
+        align-items: center;
+
+        text-align: center;
+    }
+
+    #foto-amanda,
+    #foto-maisa {
+
+        /* Centraliza a foto */
+        margin: 0 auto 20px auto;
+    }
+
+    .contatos-usuario {
+        text-align: center;
+    }
+
+    .livro {
+        width: 100%;
+
+        /* Diminui o espaçamento entre os livros */
+        margin: 0 auto 80px auto;
+
+        text-align: center;
+    }
+
+    .imagem-livro {
+
+        /* Remove o texto ao lado da imagem */
+        float: none;
+
+        /* Faz a imagem ocupar uma linha inteira */
+        display: block;
+
+        /* Centraliza a imagem */
+        margin: 0 auto 20px auto;
+    }
+
+    .titulo-livro,
+    .informacoes {
+        text-align: center;
+    }
+}
+/* FORMULÁRIO DE CONTATO */
+
+.form-contato {
+    margin: 20px auto;
+}
+
+.form-contato fieldset {
+    /* Curvatura dos cantos da borda */
+    border-radius: 10px;
+}
+
+.form-contato legend {
+    /* Cria um respiro interno nas laterais do texto para que a linha do fieldset não encoste nele */
+    padding: 0 10px;
+}
+
+.form-contato input,
+.form-contato select,
+.form-contato textarea {
+    /* Inclui padding e borda dentro do tamanho total do elemento, impedindo que o input passe de 100% */
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.form-contato textarea {
+    /* Permite que o usuário redimensione o campo apenas na vertical (para não quebrar o layout para os lados) */
+    resize: vertical;
+}
+
+.form-contato input[type="radio"] {
+    /* Reseta a largura total para que a bolinha de seleção não fique esticada gigantesca */
+    width: auto;
+}
+
+.form-contato input[type="submit"],
+.form-contato input[type="reset"] {
+    width: auto;
+
+    /* Transforma a seta do mouse na "mãozinha" de clique ao passar sobre o botão */
+    cursor: pointer;
+}
+
+/* VALIDAÇÃO DOS CAMPOS (Pseudoclasses nativas do HTML5) */
+
+/* :valid -> Destaca em verde automaticamente os campos que cumprem os requisitos (ex: preenchidos ou e-mail correto) */
+.form-contato input:not([type="radio"]):valid,
+.form-contato select:valid,
+.form-contato textarea:valid {
+    border-color: green;
+}
+
+/* :invalid -> Destaca em vermelho se o campo obrigatório estiver vazio ou incorreto */
+.form-contato input:not([type="radio"]):invalid,
+.form-contato select:invalid,
+.form-contato textarea:invalid {
+    border-color: red;
+}
+
+/* PÁGINA DE SUCESSO */
+
+.pagina-sucesso {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+.caixa-sucesso {
+    width: 60%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #FFF0F5;
+    border: 3px solid #DB7093;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.caixa-sucesso h2 {
+    color: #DB7093;
+    margin-bottom: 20px;
+}
+
+.caixa-sucesso p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.caixa-sucesso a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: #FFC0CB;
+    border: 2px solid #DB7093;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.caixa-sucesso a:hover {
+    background-color: #DB7093;
+    color: white;
+}

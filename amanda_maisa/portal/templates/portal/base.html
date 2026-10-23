@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portal Black Coquette{% endblock %}</title>
+
+    <link rel="icon" href="{% static 'portal/img/favicon.png' %}" sizes="512x512" type="image/png">
+    <link rel="stylesheet" href="{% static 'portal/css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Exibe uma mensagem caso o navegador esteja com JavaScript desabilitado -->
+    <noscript>
+        Seu navegador está com o JavaScript desabilitado. Ative-o para utilizar este portal.
+    </noscript>
+
+    <!-- Cabeçalho principal da página -->
+    <header id="cabecalho"></header> 
+
+    <!-- Área principal do site que reúne o menu e o conteúdo -->
+    <main id="container">
+
+<!-- Menu de navegação -->
+        <nav id="menu">
+            <!-- Link direto para a página inicial (Capa) -->
+            <a href="{% url 'index' %}">Capa</a>
+
+            {% for item in menu %}
+                {% if item.tipo_destino == 'interno' and item.conteudo_relacionado %}
+                    <a href="{% url 'exibir_conteudo' item.conteudo_relacionado.slug %}">{{ item.titulo }}</a>
+                {% elif item.tipo_destino == 'externo' and item.url_externa %}
+                    <a href="{{ item.url_externa }}" target="_blank">{{ item.titulo }}</a>
+                {% endif %}
+            {% endfor %}
+
+            <!-- Botão de Download do PDF -->
+            <a href="{% static 'portal/pdf/pesquisa_validacao.pdf' %}" download class="btn-pdf">
+                📄 Pesquisa
+            </a>
+        </nav>
+
+        <!-- Área onde o conteúdo da página selecionada será inserido -->
+        <section id="conteudo" style="padding:20px;">
+            {% block content %}{% endblock %}
+        </section>
+
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer id="rodape"></footer>
+
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>
