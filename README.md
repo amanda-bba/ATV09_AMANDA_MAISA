@@ -16,25 +16,6 @@ A principal mudança é que agora o site não é mais estático: ele roda dinami
 * **Front-end:** HTML5, CSS3 (com Flexbox) e JavaScript (para os efeitos de brilho)
 * **Banco de Dados:** SQLite3
 
-## Organização das Pastas
-
-ATV09_AMANDA_MAISA/
-├── amanda_maisa/            # Pasta principal do projeto Django
-│   ├── portal/                       # App do portal
-│   │   ├── static/portal/            # CSS, imagens e arquivos PDF
-│   │   ├── templates/portal/    # Templates HTML (base, index, conteudo)
-│   │   ├── admin.py           # Registro das models no Admin
-│   │   ├── models.py         # Estrutura do banco (Conteudo e Menu)
-│   │   ├── urls.py                # Rotas internas do app
-│   │   └── views.py             # Lógica de renderização das páginas
-│   ├── setup/                     # Configurações globais do Django (settings/urls)
-│   ├── db.sqlite3                # Banco de dados com o conteúdo cadastrado
-│   └── manage.py             # Executável de comandos do Django
-├── venv/                            # Ambiente virtual (ignorado no Git)
-├── .gitignore                      # Configuração do Git
-└── README.md                # Esta documentação
-
-
 ##Como Rodar o Projeto na Sua Máquina
 
 Para testar o projeto localmente, siga os passos abaixo no terminal:
