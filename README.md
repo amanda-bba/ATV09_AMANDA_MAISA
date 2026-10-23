@@ -16,7 +16,7 @@ A principal mudança é que agora o site não é mais estático: ele roda dinami
 * **Front-end:** HTML5, CSS3 (com Flexbox) e JavaScript (para os efeitos de brilho)
 * **Banco de Dados:** SQLite3
 
-##Como Rodar o Projeto na Sua Máquina
+## Como Rodar o Projeto na Sua Máquina
 
 Para testar o projeto localmente, siga os passos abaixo no terminal:
 
